@@ -14,30 +14,32 @@
 
     npm install
     
-    #O si utilizas yarn
+  O si utilizas yarn
 
     yarn install
 
 ## Configuración
 
   Antes de ejecutar la aplicación, asegúrate de configurar correctamente la URL base para la API REST falsa. Por defecto, se espera que la API REST falsa se ejecute en http://localhost:3000.
-  Si necesitas cambiar esta configuración, puedes hacerlo en el archivo package.json en la línea "server": "json-server --watch db.json --port {puerto}" y en consecuencia debes modificar la url que utilizará el dataProvider 'http://localhost:{puerto}' para una correcta comunicación entre react-admin y json-server.
+  Si necesitas cambiar esta configuración, puedes hacerlo en el archivo package.json en la línea "server": "json-server --watch db.json --port {puerto}" y en consecuencia debes modificar la url que utilizará el dataProvider 'http://localhost:{puerto}' en el fichero App.jsx para una correcta comunicación entre react-admin y json-server.
 
 ## Ejecución
 
 Una vez configurada la aplicación puedes ejecutar localmente la aplicación react-admin mediante el siguiente comando:
 
-  npm run dev
-  #O si utilizas yarn
+    npm run dev
+    
+  O si utilizas yarn
 
-  yarn dev
+    yarn dev
 
 Y una vez configurada la API REST falsa puedes ejecutar localmente json-server en otra terminal mediante el siguiente comando:
 
-  npm run server
-  #O si utilizas yarn
+    npm run server
+    
+  O si utilizas yarn
 
-  yarn server
+    yarn server
 
 ## Funcionalidades
 
