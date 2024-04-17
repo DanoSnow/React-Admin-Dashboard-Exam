@@ -1,0 +1,79 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "username": "user_1",
+            "fullname": "User One",
+            "email": "user_one@example.com",
+            "disabled": false
+        },
+        {
+            "id": "2",
+            "username": "user_2",
+            "fullname": "User Two",
+            "email": "user_two@example.com",
+            "disabled": false
+        },
+        {
+            "id": "3",
+            "username": "user_3",
+            "fullname": "User Three",
+            "email": "user_three@example.com",
+            "disabled": false
+        },
+        {
+            "id": "4",
+            "username": "user_4",
+            "fullname": "User Four",
+            "email": "user_four@example.com",
+            "disabled": false
+        },
+        {
+            "id": "5",
+            "username": "user_5",
+            "fullname": "User Five",
+            "email": "user_five@example.com",
+            "disabled": false
+        },
+        {
+            "id": "6",
+            "username": "user_6",
+            "fullname": "User Six",
+            "email": "user_six@example.com",
+            "disabled": false
+        }
+    ],
+    "posts": [
+        {
+            "id": "1",
+            "title": "Post One",
+            "body": "This is the post one",
+            "publishedAt": "2-10-2024",
+            "userId": "1"
+        },
+        {
+            "id": "2",
+            "title": "Post Two",
+            "body": "This is the post two",
+            "publishedAt": "2-11-2024",
+            "userId": "3"
+        },
+        {
+            "id": "3",
+            "title": "Post Three",
+            "body": "This is the post three",
+            "publishedAt": "2-12-2024",
+            "userId": "6"
+        },
+        {
+            "id": "4",
+            "title": "Post Four",
+            "body": "This is the post four",
+            "publishedAt": "2-13-2024",
+            "userId": "2"
+        }
+    ],
+    "sales": [
+        
+    ]
+}
