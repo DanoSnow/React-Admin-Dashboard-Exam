@@ -74,6 +74,196 @@
         }
     ],
     "sales": [
-        
+        {
+            "id":"1",
+            "year": 2023,
+            "monthId": 1,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 100,
+                    "income": 300
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 50,
+                    "income": 400
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 10,
+                    "income": 200
+                }
+            ]
+        },
+        {
+            "id":"2",
+            "year": 2023,
+            "monthId": 2,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 80,
+                    "income": 240
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 20,
+                    "income": 160
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 6,
+                    "income": 120
+                }
+            ]
+        },
+        {
+            "id":"3",
+            "year": 2023,
+            "monthId": 3,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 150,
+                    "income": 450
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 45,
+                    "income": 360
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 12,
+                    "income": 240
+                }
+            ]
+        },
+        {
+            "id":"4",
+            "year": 2023,
+            "monthId": 4,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 75,
+                    "income": 225
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 30,
+                    "income": 240
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 2,
+                    "income": 40
+                },
+                {
+                    "name": "Product 4",
+                    "quantity": 10,
+                    "income": 50
+                }
+            ]
+        },
+        {
+            "id":"5",
+            "year": 2023,
+            "monthId": 5,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 70,
+                    "income": 210
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 6,
+                    "income": 120
+                },
+                {
+                    "name": "Product 4",
+                    "quantity": 12,
+                    "income": 60
+                }
+            ]
+        },
+        {
+            "id":"6",
+            "year": 2023,
+            "monthId": 6,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 20,
+                    "income": 60
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 35,
+                    "income": 280
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 18,
+                    "income": 360
+                },
+                {
+                    "name": "Product 4",
+                    "quantity": 5,
+                    "income": 25
+                }
+            ]
+        },
+        {
+            "id":"7",
+            "year": 2023,
+            "monthId": 7,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 20,
+                    "income": 60
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 16,
+                    "income": 128
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 10,
+                    "income": 200
+                }
+            ]
+        },
+        {
+            "id":"8",
+            "year": 2023,
+            "monthId": 8,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 25,
+                    "income": 75
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 30,
+                    "income": 240
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 10,
+                    "income": 200
+                },
+                {
+                    "name": "Product 4",
+                    "quantity": 10,
+                    "income": 50
+                }
+            ]
+        }
     ]
 }

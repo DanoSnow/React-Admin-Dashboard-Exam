@@ -24,6 +24,7 @@ const data = {
     
 };
 const options = {
+    maintainAspectRatio: false,
     scales: {
         y: {
             min: 0
