@@ -4,7 +4,7 @@ import { List, Datagrid, TextField, NumberField, ArrayField, ChipField, SingleFi
 const SalesList = () => {
     return (
         <List>
-            <Datagrid>
+            <Datagrid rowClick="show">
                 <TextField source="id" />
                 <NumberField source="year" />
                 <NumberField source="monthId" />
