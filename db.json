@@ -49,28 +49,32 @@
             "title": "Post One",
             "body": "This is the post one",
             "publishedAt": "2-10-2024",
-            "userId": "1"
+            "userId": "1",
+            "checked": true
         },
         {
             "id": "2",
             "title": "Post Two",
             "body": "This is the post two",
             "publishedAt": "2-11-2024",
-            "userId": "3"
+            "userId": "3",
+            "checked": false
         },
         {
             "id": "3",
             "title": "Post Three",
             "body": "This is the post three",
             "publishedAt": "2-12-2024",
-            "userId": "6"
+            "userId": "6",
+            "checked": false
         },
         {
             "id": "4",
             "title": "Post Four",
             "body": "This is the post four",
             "publishedAt": "2-13-2024",
-            "userId": "2"
+            "userId": "2",
+            "checked": false
         }
     ],
     "sales": [

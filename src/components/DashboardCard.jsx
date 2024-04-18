@@ -4,7 +4,10 @@ import Divider from '@mui/material/Divider';
 
 const DashboardCard = ({ header, content, icon, body=null}) => {
     const renderBody = body ?
-    <div><Divider />{body.map((e, index) => <div key={index}><Container sx={{padding: 2}}>{e}</Container></div>)}</div> :
+    <div><Divider />{body.map((e, index) => <div key={index}>
+        <Container sx={{padding: 2}}>
+            <Typography variant='p'>{e}</Typography>
+        </Container></div>)}</div> :
     null;
     return (
         <Card>
