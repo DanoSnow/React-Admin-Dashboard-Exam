@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, Grid, Container } from "@mui/material";
 import LineChart from './LineChart';
 import DashboardCard from './DashboardCard';
@@ -8,6 +8,34 @@ import MessageIcon from '@mui/icons-material/Message';
 import PersonAddRoundedIcon from '@mui/icons-material/PersonAddRounded';
 
 const Dashboard = () => {
+    const [chartData, setChartData] = useState([{
+        year: 0,
+        monthId: 0,
+        totalIncome: 0
+    }]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try{
+                const response = await fetch('http://localhost:3000/sales');
+                if(!response.ok){
+                    throw new Error('Failed to fetch data');
+                }
+                const data = await response.json();
+                setChartData(data.map(e => {
+                    const totalIncome = e.products.reduce((total, product) => total + product.income, 0);
+                    return {
+                        year: e.year,
+                        monthId: e.monthId,
+                        totalIncome: totalIncome
+                    };
+                }));
+            } catch(error){
+                console.error('Error fetching data:', error);
+            }
+        };
+        fetchData();
+    }, []);
+
     return (
         <Card>
             <CardHeader title="Welcome to the administration" />
@@ -17,13 +45,13 @@ const Dashboard = () => {
                         <Container>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} sm={6} md={6}>
-                                    <DashboardCard header="Month sales" content="1538 €" icon={EuroIcon} />
+                                    <DashboardCard header="Month sales" content={`${chartData[chartData.length-1].totalIncome} €`} icon={EuroIcon} />
                                 </Grid>
                                 <Grid item xs={12} sm={6} md={6}>
                                     <DashboardCard header="New orders" content="18" icon={ShoppingCartIcon} />
                                 </Grid>
                                 <Grid item xs={12} sx={{height: '300px', width: 'auto'}}>
-                                    <LineChart />
+                                    <LineChart chartData={chartData} />
                                 </Grid>
                             </Grid>
                         </Container>
