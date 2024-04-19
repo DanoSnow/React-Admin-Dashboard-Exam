@@ -7,51 +7,52 @@ Chart.register(
 );
 
 const PieChart = () => {
-    const [record, setRecord] = useState(null);
-    const recordContext = useRecordContext();
+    const record = useRecordContext();
+    const [chartData, setChartData] = useState(null);
+    const [chartOptions, setChartOptions] = useState(null);
     useEffect(() => {
         const getRecordContext = () => {
-            setRecord(recordContext);
+            if(record){
+                const labels = record.products.map(product => product.name);
+                const incomes = record.products.map(product => product.income);
+                const data = {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Incomes per product',
+                            data: incomes,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(255, 206, 86, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)',
+                                'rgba(255, 159, 64, 0.6)'
+                            ],
+                            borderWidth: 1
+                        }
+                    ]
+                };
+                const options = {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                };
+                setChartData(data);
+                setChartOptions(options);
+            }
         }
         getRecordContext();
     }, [record]);
-    //const labels = record.products.map(product => product.name);
-    //const incomes = record.products.map(product => product.income);
-    //Title?
-    const labels = ['Product 1', 'Product 2', 'Product 3', 'Product 4'];
-    const incomes = [50, 60, 100, 80];
-    const data = {
-        labels: labels,
-        datasets: [
-            {
-                label: 'Incomes per product',
-                data: incomes,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(153, 102, 255, 0.6)',
-                    'rgba(255, 159, 64, 0.6)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(153, 102, 255, 0.6)',
-                    'rgba(255, 159, 64, 0.6)'
-                ],
-                borderWidth: 1
-            }
-        ]
-    };
-    const options = {
-        responsive: true,
-        maintainAspectRatio: false,
-    };
-
-    return <Pie data={data} options={options} />
+    
+    return chartData && chartOptions ? <Pie data={chartData} options={chartOptions} /> : null;
 }
 
 export default PieChart
