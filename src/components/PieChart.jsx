@@ -6,7 +6,7 @@ Chart.register(
     ArcElement, Tooltip, Legend, 
 );
 
-const PieChart = () => {
+const PieChart = ({ data }) => {
     const record = useRecordContext();
     const [chartData, setChartData] = useState(null);
     const [chartOptions, setChartOptions] = useState(null);

@@ -8,7 +8,7 @@ import PostIcon from '@mui/icons-material/Book'
 import UserIcon from "@mui/icons-material/Group"
 import EuroIcon from '@mui/icons-material/Euro';
 import Dashboard from "./components/Dashboard"
-import PieChart from "./components/PieChart"
+import ShowWrapper from "./components/ShowWrapper"
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Resource name="posts" list={PostsList} icon={PostIcon} />
       <Resource name="sales" list={SalesList} icon={EuroIcon} 
         show={
-          <Show component={PieChart}>
+          <Show component={ShowWrapper}>
             ...
         </Show>} 
       />
