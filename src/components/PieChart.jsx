@@ -1,39 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import { Pie } from 'react-chartjs-2'
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js'
-import { useRecordContext } from 'react-admin';
 Chart.register(
     ArcElement, Tooltip, Legend, 
 );
 
 const PieChart = ({ chartData }) => {
     const [data, setData] = useState(null);
+    function generateDynamicColors(count){
+        const colors = [];
+        for(let i=0; i<count; i++){
+            const hue = (i * 360) / count;
+            colors.push(`rgba(${hue}, 90, 50, 0.75`);
+        }
+        return colors;
+    }
     useEffect(() => {
         if(chartData){
             const labels = chartData.map(product => product.name);
             const incomes = chartData.map(product => product.income);
+            const colors = generateDynamicColors(chartData.length);
             const data_ = {
                 labels: labels,
                 datasets: [
                     {
                         label: 'Incomes per product',
                         data: incomes,
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.6)',
-                            'rgba(54, 162, 235, 0.6)',
-                            'rgba(255, 206, 86, 0.6)',
-                            'rgba(75, 192, 192, 0.6)',
-                            'rgba(153, 102, 255, 0.6)',
-                            'rgba(255, 159, 64, 0.6)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 0.6)',
-                            'rgba(54, 162, 235, 0.6)',
-                            'rgba(255, 206, 86, 0.6)',
-                            'rgba(75, 192, 192, 0.6)',
-                            'rgba(153, 102, 255, 0.6)',
-                            'rgba(255, 159, 64, 0.6)'
-                        ],
+                        backgroundColor: colors,
+                        borderColor: colors,
                         borderWidth: 1
                     }
                 ]
