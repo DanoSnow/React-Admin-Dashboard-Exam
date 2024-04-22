@@ -5,6 +5,7 @@ import UsersList from "./components/UsersList"
 import PostsList from "./components/PostsList"
 import SalesList from "./components/SalesList"
 import CustomersList from "./components/CustomersList"
+import ReviewsList from "./components/ReviewsList"
 import PostIcon from '@mui/icons-material/Book'
 import UserIcon from "@mui/icons-material/Group"
 import EuroIcon from '@mui/icons-material/Euro';
@@ -30,7 +31,7 @@ function App() {
             ...
         </Show>} 
       />
-      <Resource name="reviews" list={ListGuesser} icon={MessageIcon} />
+      <Resource name="reviews" list={ReviewsList} icon={MessageIcon} />
     </Admin>
   )
 }

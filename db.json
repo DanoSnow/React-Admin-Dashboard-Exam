@@ -346,6 +346,38 @@
         }
     ],
     "reviews": [
-
+        {
+            "id": 1,
+            "productId": 1,
+            "reviews": [
+                {
+                    "customerId": 1,
+                    "rating": 5,
+                    "comment": "Excellent product, hihgly recomended.",
+                    "date": "1-10-2023",
+                    "checked": false
+                },
+                {
+                    "customerId": 3,
+                    "rating": 4,
+                    "comment": "I like this product.",
+                    "date": "1-20-2023",
+                    "checked": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "productId": 2,
+            "reviews": [
+                {
+                    "customerId": 2,
+                    "rating": 1,
+                    "comment": "I did not like this product. I will not buy it again.",
+                    "date": "1-11-2023",
+                    "checked": false
+                }
+            ]
+        }
     ]
 }

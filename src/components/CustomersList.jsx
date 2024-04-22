@@ -1,6 +1,5 @@
 import React from 'react'
 import { List, Datagrid, TextField, EmailField, SimpleList } from 'react-admin';
-import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 const CustomersList = () => {
