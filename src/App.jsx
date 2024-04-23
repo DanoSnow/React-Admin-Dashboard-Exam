@@ -13,6 +13,7 @@ import MessageIcon from '@mui/icons-material/Message';
 import Dashboard from "./components/Dashboard"
 import ShowWrapper from "./components/ShowWrapper"
 import CustomerShow from "./components/CustomerShow"
+import ReviewsShow from "./components/ReviewsShow"
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
             ...
         </Show>} 
       />
-      <Resource name="reviews" list={ReviewsList} icon={MessageIcon} />
+      <Resource name="reviews" list={ReviewsList} icon={MessageIcon} show={ReviewsShow} />
     </Admin>
   )
 }

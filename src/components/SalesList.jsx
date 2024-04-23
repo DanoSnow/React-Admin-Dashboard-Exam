@@ -9,7 +9,7 @@ const SalesList = () => {
                 <NumberField source="year" />
                 <NumberField source="monthId" />
                 <ArrayField source="products">
-                    <SingleFieldList>
+                    <SingleFieldList linkType={false}>
                         <ChipField source="name" />
                     </SingleFieldList>
                 </ArrayField>
