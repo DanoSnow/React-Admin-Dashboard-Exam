@@ -1,5 +1,7 @@
 import React from 'react'
 import { Show, SimpleShowLayout, TextField, ArrayField, Datagrid, BooleanField, NumberField } from 'react-admin'
+import MarkChatReadIcon from '@mui/icons-material/MarkChatRead';
+import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
 
 const ReviewsShow = () => {
     return (
@@ -13,7 +15,7 @@ const ReviewsShow = () => {
                         <TextField source="comment" />
                         <TextField source="date" />
                         <NumberField source="rating" />
-                        <BooleanField source="checked" />
+                        <BooleanField sx={{display: 'flex', justifyContent: 'center'}} source="checked" TrueIcon={MarkChatReadIcon} FalseIcon={MarkChatUnreadIcon} />
                     </Datagrid>
                 </ArrayField>
             </SimpleShowLayout>

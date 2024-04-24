@@ -276,18 +276,18 @@
             "products": [
                 {
                     "name": "Product 1",
-                    "quantity": 100,
-                    "income": 300
+                    "quantity": 77,
+                    "income": 231
                 },
                 {
                     "name": "Product 2",
-                    "quantity": 50,
-                    "income": 400
+                    "quantity": 36,
+                    "income": 288
                 },
                 {
                     "name": "Product 3",
-                    "quantity": 10,
-                    "income": 200
+                    "quantity": 15,
+                    "income": 300
                 }
             ]
         },
@@ -298,8 +298,8 @@
             "products": [
                 {
                     "name": "Product 1",
-                    "quantity": 80,
-                    "income": 240
+                    "quantity": 67,
+                    "income": 201
                 },
                 {
                     "name": "Product 2",
@@ -308,8 +308,8 @@
                 },
                 {
                     "name": "Product 3",
-                    "quantity": 6,
-                    "income": 120
+                    "quantity": 3,
+                    "income": 60
                 }
             ]
         },
@@ -320,18 +320,18 @@
             "products": [
                 {
                     "name": "Product 1",
-                    "quantity": 150,
-                    "income": 450
+                    "quantity": 95,
+                    "income": 285
                 },
                 {
                     "name": "Product 2",
-                    "quantity": 45,
-                    "income": 360
+                    "quantity": 16,
+                    "income": 96
                 },
                 {
                     "name": "Product 3",
-                    "quantity": 12,
-                    "income": 240
+                    "quantity": 4,
+                    "income": 80
                 }
             ]
         },
@@ -342,13 +342,13 @@
             "products": [
                 {
                     "name": "Product 1",
-                    "quantity": 75,
-                    "income": 225
+                    "quantity": 54,
+                    "income": 162
                 },
                 {
                     "name": "Product 2",
-                    "quantity": 30,
-                    "income": 240
+                    "quantity": 16,
+                    "income": 128
                 },
                 {
                     "name": "Product 3",
@@ -455,7 +455,7 @@
                     "rating": 4,
                     "comment": "I like this product.",
                     "date": "1-20-2023",
-                    "checked": false
+                    "checked": true
                 }
             ]
         },

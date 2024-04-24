@@ -36,24 +36,23 @@ const Dashboard = () => {
         fetchData();
     }, []);
 
-    const [postData, setPostData] = useState({
+    const [reviewsData, setReviewsData] = useState({
         unchecked: 0,
-        posts: null
+        reviews: null
     });
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const response = await fetch('http://localhost:3000/posts');
+                const response = await fetch('http://localhost:3000/reviews');
                 if(!response.ok){
                     throw new Error('Failed to fetch data');
                 }
                 const data = await response.json();
-                const unchecked = data.filter(e => !e.checked);
-                const posts = unchecked.length!=0 ? unchecked.map(e => e.body) : null;
-                setPostData({
-                    unchecked: unchecked.length,
-                    posts: posts
-                })
+                const reviews = data.flatMap(e => e.reviews.filter(e_ => !e_.checked).map(e_ => e_.comment));
+                setReviewsData({
+                    unchecked: reviews.length,
+                    reviews: reviews
+                });
             } catch(error){
                 console.error('Error fetching data:', error);
             }
@@ -82,8 +81,8 @@ const Dashboard = () => {
                         </Container>
                     </Grid>
                     <Grid item xs={12} md={3} sm={6}>
-                        <DashboardCard header="Pending posts" content={postData.unchecked} icon={MessageIcon}
-                        body={postData.posts} />
+                        <DashboardCard header="Pending reviews" content={reviewsData.unchecked} icon={MessageIcon}
+                        body={reviewsData.reviews} />
                     </Grid>
                     <Grid item xs={12} md={3} sm={6}>
                         <DashboardCard header="New customers" content="4" icon={PersonAddRoundedIcon}
