@@ -268,6 +268,99 @@
                     "income": 50
                 }
             ]
+        },
+        {
+            "id":"9",
+            "year": 2023,
+            "monthId": 9,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 100,
+                    "income": 300
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 50,
+                    "income": 400
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 10,
+                    "income": 200
+                }
+            ]
+        },
+        {
+            "id":"10",
+            "year": 2023,
+            "monthId": 10,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 80,
+                    "income": 240
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 20,
+                    "income": 160
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 6,
+                    "income": 120
+                }
+            ]
+        },
+        {
+            "id":"11",
+            "year": 2023,
+            "monthId": 11,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 150,
+                    "income": 450
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 45,
+                    "income": 360
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 12,
+                    "income": 240
+                }
+            ]
+        },
+        {
+            "id":"12",
+            "year": 2023,
+            "monthId": 12,
+            "products": [
+                {
+                    "name": "Product 1",
+                    "quantity": 75,
+                    "income": 225
+                },
+                {
+                    "name": "Product 2",
+                    "quantity": 30,
+                    "income": 240
+                },
+                {
+                    "name": "Product 3",
+                    "quantity": 2,
+                    "income": 40
+                },
+                {
+                    "name": "Product 4",
+                    "quantity": 10,
+                    "income": 50
+                }
+            ]
         }
     ],
     "customers": [
